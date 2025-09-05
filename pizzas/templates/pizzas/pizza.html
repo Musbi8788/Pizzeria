@@ -1,0 +1,18 @@
+{% extends 'pizzas/base.html' %}
+{% block content %}
+<h1>Pizza: {{ pizza }} </h1>
+<p>Toppings:</p>
+<ul>
+    {% for topping in toppings %}
+     <li>
+        <p> {{ topping.date_added|date:'M d, Y H:i' }}</p>
+        </li>
+        <li>
+            <p> {{ topping.pizza_name }}</p>
+        </li>
+    {% empty %}
+     <li>No topping added yet.</li>
+    {% endfor %}
+        
+</ul>
+{% endblock %}

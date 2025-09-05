@@ -6,6 +6,10 @@
     <title>Pizza's Resturant</title>
 </head>
 <body>
+    <p><a href="{% url 'pizzas:index' %}">Home</a> -
+        <a href="{% url 'pizzas:my_pizzas' %}">Pizzas</a>
+    </p>
+
   {% block content %}
     
   {% endblock %}
